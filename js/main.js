@@ -21,12 +21,4 @@ const renderProducts = list => {
   document.querySelector('.products').innerHTML = productList;
   };
 
-// второй вариант
-
-// const renderProducts = list => {
-//   const productList = list.reduce((acc, item) => 
-// acc + renderProduct(item.title, item.price), '');
-//   document.querySelector('.products').innerHTML = productList;
-// };
-
 renderProducts(products);
