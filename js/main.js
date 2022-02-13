@@ -3,7 +3,7 @@
 const products = [
   {id: 1, title: 'Notebook', price: 1000},
   {id: 2, title: 'Mouse', price: 100},
-  {id: 3, title: 'Keyboard', price: 250},
+  {id: 3, title: 'Keyboard', price: 350},
   {id: 4, title: 'Gamepad', price: 150},
 ];
 
@@ -17,16 +17,8 @@ const renderProduct = ((title, price) =>
 
 const renderProducts = list => {
   const productList = (list.map(product => 
-    renderProduct(product.title, product.foto, product.price))).join('');
+    renderProduct(product.title, product.price))).join('');
   document.querySelector('.products').innerHTML = productList;
   };
-
-// второй вариант
-
-// const renderProducts = list => {
-//   const productList = list.reduce((acc, item) => 
-// acc + renderProduct(item.title, item.price), '');
-//   document.querySelector('.products').innerHTML = productList;
-// };
 
 renderProducts(products);
