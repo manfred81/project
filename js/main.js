@@ -15,15 +15,18 @@ const renderProduct = (title, price) => {
           </div>`;
 };
 
-// const renderProducts = list => {
-//   const productList = list.map(item => renderProduct(item.title, item.price));
-//   console.log(productList);
-//   document.querySelector('.products').innerHTML = productList.join('');
-// };
 const renderProducts = list => {
-  const productList = list.reduce((acc, item) => 
-acc + renderProduct(item.title, item.price), '');
-  document.querySelector('.products').innerHTML = productList;
+  const productList = list.map(item => renderProduct(item.title, item.price));
+  console.log(productList);
+  document.querySelector('.products').innerHTML = productList.join('');
 };
+
+// второй вариант
+
+// const renderProducts = list => {
+//   const productList = list.reduce((acc, item) => 
+// acc + renderProduct(item.title, item.price), '');
+//   document.querySelector('.products').innerHTML = productList;
+// };
 
 renderProducts(products);
